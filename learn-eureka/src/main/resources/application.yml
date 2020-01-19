@@ -1,4 +1,4 @@
-#¶Ë¿Ú
+#ç«¯å£
 server:
   port: 7501
 
@@ -8,7 +8,7 @@ spring:
 
   application:
     name: eureka
-  # °²È«ÈÏÖ¤
+  # å®‰å…¨è®¤è¯
   security:
     user:
       name: root
@@ -18,27 +18,25 @@ spring:
 #eureka
 eureka:
   server:
-      #¹Ø±Õ×ÔÎÒ±£»¤
-      enable-self-preservation: false
-      #ÇåÀí¼ä¸ôÊ±¼ä
-      eviction-interval-timer-in-ms: 5000
+    #å…³é—­è‡ªæˆ‘ä¿æŠ¤
+    enable-self-preservation: false
+    #æ¸…ç†é—´éš”æ—¶é—´
+    eviction-interval-timer-in-ms: 5000
   instance:
-    #Ê¹ÓÃIP×¢²á
+    #ä½¿ç”¨IPæ³¨å†Œ
     prefer-ip-address: true
-    #Ç¿ÖÆÖ¸¶¨IPµØÖ·£¬Ä¬ÈÏ»á»ñÈ¡±¾»úµÄIPµØÖ·
+    #å¼ºåˆ¶æŒ‡å®šIPåœ°å€ï¼Œé»˜è®¤ä¼šè·å–æœ¬æœºçš„IPåœ°å€
     ip-address: 192.0.0.112
     instance-id: ${spring.cloud.client.ip-address}:${server.port}
     hostname: ${spring.cloud.client.ip-address}-${server.port}
 
   client:
-    # ²»Ïòeureka×¢²á ÒòÎª×Ô¼º¾ÍÊÇserver
+    # ä¸å‘eurekaæ³¨å†Œ å› ä¸ºè‡ªå·±å°±æ˜¯server
     # register-with-eureka: false
-    # ²»»ñÈ¡·şÎñ ÒòÎª×Ô¼º¾ÍÊÇserver
+    # ä¸è·å–æœåŠ¡ å› ä¸ºè‡ªå·±å°±æ˜¯server
     # fetch-registry: false
-    # ·şÎñµØÖ·
+    # æœåŠ¡åœ°å€
     service-url:
-      # ·şÎñ×¢²áÖĞĞÄÎ»ÖÃ
+      # æœåŠ¡æ³¨å†Œä¸­å¿ƒä½ç½®
       #defaultZone: http://${spring.security.user.name}:${spring.security.user.password}@${eureka.instance.instance-id}/eureka/
       defaultZone: ${eureka-config.server-urls}
-
-
