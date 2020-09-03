@@ -1,5 +1,0 @@
-#eureka 高可用地址
-eureka-config:
-  server-urls: http://root:123456@192.0.0.112:7500/eureka/,http://root:123456@192.0.0.112:7501/eureka/
-
-

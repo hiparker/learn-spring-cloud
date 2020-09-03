@@ -1,0 +1,13 @@
+server:
+  port: 7600
+
+spring:
+  application:
+    name: provider
+
+# Eureka 公共配置
+eureka:
+  client:
+    service-url:
+      defaultZone: http://root:123456@192.168.0.102:7500/eureka/,http://root:123456@192.168.0.105:7501/eureka/
+

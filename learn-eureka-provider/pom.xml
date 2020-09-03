@@ -5,66 +5,35 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.3.2.RELEASE</version>
+        <version>2.3.3.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-
-
-    <groupId>org.parker.learn</groupId>
-    <artifactId>eureka</artifactId>
+    <groupId>com.parker.learn.eureka</groupId>
+    <artifactId>provider</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <packaging>jar</packaging>
+    <name>provider</name>
+    <description>生产者 project for Spring Boot</description>
 
-
-    <!--项目的名称, Maven产生的文档用 -->
-    <name>learn-eureka</name>
-    <!--项目主页的URL, Maven产生的文档用 -->
-    <url>http://www.opsli.com</url>
-    <!-- 描述 -->
-    <description>学习 spring-cloud eureka.</description>
-
-    <!--项目开发者列表 -->
-    <developers>
-        <!--项目开发者的信息 -->
-        <developer>
-            <!--SCM里项目开发者的唯一标识符 -->
-            <id>parker</id>
-            <!--项目开发者的全名 -->
-            <name>Parker Chou</name>
-            <!--项目开发者的email -->
-            <email>meet.parker@foxmail.com</email>
-            <!--项目开发者的主页的URL -->
-            <url>http://www.opsli.com</url>
-            <!--项目开发者在项目中扮演的角色，角色元素描述了各种角色 -->
-            <roles>
-                <role>Project Manager</role>
-                <role>Architect</role>
-            </roles>
-            <!--项目开发者所属组织 -->
-            <organization>personal</organization>
-        </developer>
-    </developers>
-
-
-    <!-- 全局版本控制 -->
     <properties>
         <java.version>1.8</java.version>
-        <spring-cloud.version>Hoxton.SR1</spring-cloud.version>
+        <spring-cloud.version>Hoxton.SR8</spring-cloud.version>
     </properties>
 
     <dependencies>
         <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
-        </dependency>
-
-        <!--设置登录密码需要用到Spring Security-->
-        <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-security</artifactId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
         </dependency>
 
-
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional>
+        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
@@ -76,14 +45,6 @@
                 </exclusion>
             </exclusions>
         </dependency>
-
-        <!-- lombok -->
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-        </dependency>
-
-
     </dependencies>
 
     <dependencyManagement>
@@ -98,7 +59,6 @@
         </dependencies>
     </dependencyManagement>
 
-
     <!-- 编译环境 -->
     <build>
         <plugins>
@@ -107,7 +67,7 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
                     <!-- 指定该Main Class为全局的唯一入口 -->
-                    <mainClass>com.parker.learn.eureka.EurekaApplication</mainClass>
+                    <mainClass>com.parker.learn.eureka.provider.ProviderApplication</mainClass>
                 </configuration>
             </plugin>
             <!--指定JDK编译版本 -->

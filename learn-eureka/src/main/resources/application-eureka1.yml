@@ -1,0 +1,15 @@
+#端口
+server:
+  port: 7500
+
+spring:
+  profiles:
+    include: common
+
+#eureka
+eureka:
+  instance:
+    #强制指定IP地址，默认会获取本机的IP地址
+    ip-address: 192.168.0.102
+    instance-id: ${spring.cloud.client.ip-address}:${server.port}
+    hostname: ${spring.cloud.client.ip-address}-${server.port}
