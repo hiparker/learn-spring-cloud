@@ -1,13 +1,10 @@
 package com.parker.learn.eureka.consumer;
 
-import com.netflix.appinfo.InstanceInfo;
-import com.netflix.discovery.EurekaClient;
 import org.apache.commons.lang.builder.ToStringBuilder;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
-import org.springframework.cloud.netflix.eureka.EurekaDiscoveryClient;
+import org.springframework.cloud.client.loadbalancer.LoadBalancerClient;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
@@ -27,6 +24,9 @@ public class RestConsumerController {
 
     @Autowired
     DiscoveryClient discoveryClient;
+
+    @Autowired
+    LoadBalancerClient lb;
 
     @RequestMapping("client")
     public void client(){
@@ -63,6 +63,22 @@ public class RestConsumerController {
                 str = restTemplate.getForObject(url, String.class);
             }
         }
+
+        return str;
+    }
+
+
+    @RequestMapping("client4")
+    public String client4(){
+        String str = "";
+        // 服务  Ribbon 参与进来 完成客户端负载均衡
+        ServiceInstance serviceInstance = lb.choose("provider");
+
+        URI uri = serviceInstance.getUri();
+        String url = uri.toString()+"/getHi";
+
+        RestTemplate restTemplate = new RestTemplate();
+        str = restTemplate.getForObject(url, String.class);
 
         return str;
     }
