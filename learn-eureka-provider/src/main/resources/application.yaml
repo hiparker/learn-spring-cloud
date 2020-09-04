@@ -12,5 +12,5 @@ eureka:
     healthcheck:
       enabled: true
     service-url:
-      defaultZone: http://root:123456@192.168.0.102:7500/eureka/,http://root:123456@192.168.0.105:7501/eureka/
+      defaultZone: http://root:123456@117.51.140.37:7500/eureka/,http://root:123456@47.93.54.81:7501/eureka/
 
