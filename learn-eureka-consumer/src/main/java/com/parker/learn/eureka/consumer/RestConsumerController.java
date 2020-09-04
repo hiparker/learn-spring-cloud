@@ -83,4 +83,18 @@ public class RestConsumerController {
 
         return str;
     }
+
+    /**
+     * RestTemplate 与 Ribbon 捆绑
+     * @return
+     */
+    @RequestMapping("client5")
+    public String client5(){
+        String str = "";
+
+        String url = "http://provider/getHi";
+        str = restTemplate.getForObject(url, String.class);
+
+        return str;
+    }
 }

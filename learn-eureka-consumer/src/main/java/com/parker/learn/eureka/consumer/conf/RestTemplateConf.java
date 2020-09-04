@@ -1,5 +1,6 @@
 package com.parker.learn.eureka.consumer.conf;
 
+import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.client.RestTemplate;
@@ -15,7 +16,8 @@ import org.springframework.web.client.RestTemplate;
 public class RestTemplateConf {
 
     @Bean
-    public RestTemplate iRestTemplate(){
+    @LoadBalanced
+    public RestTemplate getRestTemplate(){
 
         // 这里开启 随机策略 测试 ribbon的策略
         return new RestTemplate();

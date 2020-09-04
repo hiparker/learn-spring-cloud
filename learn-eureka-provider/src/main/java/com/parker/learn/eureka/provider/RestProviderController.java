@@ -1,5 +1,6 @@
 package com.parker.learn.eureka.provider;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -13,9 +14,13 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class RestProviderController {
 
+    @Value("${server.port}")
+    private int port;
+
+
     @RequestMapping("getHi")
     public String getHi(){
-        return "Hi Eureka!";
+        return "Hi Eureka! 我的端口是："+port;
     }
 
 }
