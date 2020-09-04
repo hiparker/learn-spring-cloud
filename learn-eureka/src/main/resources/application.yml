@@ -1,6 +1,6 @@
 spring:
   profiles:
-    include: eureka1
+    include: eureka2
 
 #eureka
 eureka:

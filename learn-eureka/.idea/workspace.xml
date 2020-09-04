@@ -11,7 +11,7 @@
       <change beforePath="$PROJECT_DIR$/../learn-eureka-provider/src/main/java/com/parker/learn/eureka/provider/RestProviderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../learn-eureka-provider/src/main/java/com/parker/learn/eureka/provider/RestProviderController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../learn-eureka-provider/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../learn-eureka-provider/src/main/resources/application.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application-eureka2.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application-eureka2.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application-common.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application-common.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/parker/learn/eureka/EurekaApplication.class" beforeDir="false" />
@@ -80,15 +80,13 @@
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.EurekaApplication (1)">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -144,7 +142,8 @@
       <workItem from="1580645134640" duration="748000" />
       <workItem from="1580703896407" duration="1806000" />
       <workItem from="1599123216969" duration="16157000" />
-      <workItem from="1599185959566" duration="1801000" />
+      <workItem from="1599185959566" duration="4358000" />
+      <workItem from="1599234868571" duration="1362000" />
     </task>
     <task id="LOCAL-00001" summary="编码">
       <created>1579436540478</created>
@@ -153,7 +152,14 @@
       <option name="project" value="LOCAL" />
       <updated>1579436540478</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="eureka 配置">
+      <created>1599201211573</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1599201211573</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -161,45 +167,50 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="编码" />
-    <option name="LAST_COMMIT_MESSAGE" value="编码" />
+    <MESSAGE value="eureka 配置" />
+    <option name="LAST_COMMIT_MESSAGE" value="eureka 配置" />
   </component>
   <component name="WindowStateProjectService">
     <state x="304" y="160" width="1190" height="676" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1599124345707">
       <screen x="0" y="23" width="1680" height="950" />
     </state>
     <state x="304" y="160" width="1190" height="676" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1680.950@0.23.1680.950" timestamp="1599124345707" />
-    <state width="1638" height="302" key="GridCell.Tab.0.bottom" timestamp="1599188160733">
+    <state x="334" y="73" key="CommitChangelistDialog2" timestamp="1599201211453">
       <screen x="0" y="23" width="1680" height="950" />
     </state>
-    <state width="1638" height="302" key="GridCell.Tab.0.bottom/0.23.1680.950@0.23.1680.950" timestamp="1599188160733" />
-    <state width="1638" height="302" key="GridCell.Tab.0.center" timestamp="1599188160732">
+    <state x="334" y="73" key="CommitChangelistDialog2/0.23.1680.950@0.23.1680.950" timestamp="1599201211453" />
+    <state width="1638" height="374" key="GridCell.Tab.0.bottom" timestamp="1599236035473">
       <screen x="0" y="23" width="1680" height="950" />
     </state>
-    <state width="1638" height="302" key="GridCell.Tab.0.center/0.23.1680.950@0.23.1680.950" timestamp="1599188160732" />
-    <state width="1638" height="302" key="GridCell.Tab.0.left" timestamp="1599188160731">
+    <state width="1638" height="374" key="GridCell.Tab.0.bottom/0.23.1680.950@0.23.1680.950" timestamp="1599236035473" />
+    <state width="1638" height="374" key="GridCell.Tab.0.center" timestamp="1599236035472">
       <screen x="0" y="23" width="1680" height="950" />
     </state>
-    <state width="1638" height="302" key="GridCell.Tab.0.left/0.23.1680.950@0.23.1680.950" timestamp="1599188160731" />
-    <state width="1638" height="302" key="GridCell.Tab.0.right" timestamp="1599188160732">
+    <state width="1638" height="374" key="GridCell.Tab.0.center/0.23.1680.950@0.23.1680.950" timestamp="1599236035472" />
+    <state width="1638" height="374" key="GridCell.Tab.0.left" timestamp="1599236035472">
       <screen x="0" y="23" width="1680" height="950" />
     </state>
-    <state width="1638" height="302" key="GridCell.Tab.0.right/0.23.1680.950@0.23.1680.950" timestamp="1599188160732" />
-    <state width="1638" height="302" key="GridCell.Tab.1.bottom" timestamp="1599187670440">
+    <state width="1638" height="374" key="GridCell.Tab.0.left/0.23.1680.950@0.23.1680.950" timestamp="1599236035472" />
+    <state width="1638" height="374" key="GridCell.Tab.0.right" timestamp="1599236035473">
       <screen x="0" y="23" width="1680" height="950" />
     </state>
-    <state width="1638" height="302" key="GridCell.Tab.1.bottom/0.23.1680.950@0.23.1680.950" timestamp="1599187670440" />
-    <state width="1638" height="302" key="GridCell.Tab.1.center" timestamp="1599187670440">
+    <state width="1638" height="374" key="GridCell.Tab.0.right/0.23.1680.950@0.23.1680.950" timestamp="1599236035473" />
+    <state width="1638" height="374" key="GridCell.Tab.1.bottom" timestamp="1599230550373">
       <screen x="0" y="23" width="1680" height="950" />
     </state>
-    <state width="1638" height="302" key="GridCell.Tab.1.center/0.23.1680.950@0.23.1680.950" timestamp="1599187670440" />
-    <state width="1638" height="302" key="GridCell.Tab.1.left" timestamp="1599187670439">
+    <state width="1638" height="374" key="GridCell.Tab.1.bottom/0.23.1680.950@0.23.1680.950" timestamp="1599230550373" />
+    <state width="1638" height="374" key="GridCell.Tab.1.center" timestamp="1599230550372">
       <screen x="0" y="23" width="1680" height="950" />
     </state>
-    <state width="1638" height="302" key="GridCell.Tab.1.left/0.23.1680.950@0.23.1680.950" timestamp="1599187670439" />
-    <state width="1638" height="302" key="GridCell.Tab.1.right" timestamp="1599187670440">
+    <state width="1638" height="374" key="GridCell.Tab.1.center/0.23.1680.950@0.23.1680.950" timestamp="1599230550372" />
+    <state width="1638" height="374" key="GridCell.Tab.1.left" timestamp="1599230550372">
       <screen x="0" y="23" width="1680" height="950" />
     </state>
-    <state width="1638" height="302" key="GridCell.Tab.1.right/0.23.1680.950@0.23.1680.950" timestamp="1599187670440" />
+    <state width="1638" height="374" key="GridCell.Tab.1.left/0.23.1680.950@0.23.1680.950" timestamp="1599230550372" />
+    <state width="1638" height="374" key="GridCell.Tab.1.right" timestamp="1599230550372">
+      <screen x="0" y="23" width="1680" height="950" />
+    </state>
+    <state width="1638" height="374" key="GridCell.Tab.1.right/0.23.1680.950@0.23.1680.950" timestamp="1599230550372" />
     <state x="378" y="160" key="Maven.ArtifactSearchDialog" timestamp="1599124628284">
       <screen x="0" y="23" width="1680" height="950" />
     </state>
