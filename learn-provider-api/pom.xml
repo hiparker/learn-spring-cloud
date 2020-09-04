@@ -7,12 +7,11 @@
         <artifactId>learn-spring-cloud</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
-
-    <groupId>com.parker.learn.eureka</groupId>
-    <artifactId>learn-eureka-consumer</artifactId>
+    <groupId>com.parker.learn</groupId>
+    <artifactId>learn-provider-api</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>learn-eureka-consumer</name>
-    <description>消费者 project for Spring Boot</description>
+    <name>learn-provider-api</name>
+    <description>Demo project for Spring Boot</description>
 
 
     <dependencies>
@@ -20,16 +19,7 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
-        </dependency>
 
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <optional>true</optional>
-        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
@@ -43,18 +33,6 @@
         </dependency>
     </dependencies>
 
-    <dependencyManagement>
-        <dependencies>
-            <dependency>
-                <groupId>org.springframework.cloud</groupId>
-                <artifactId>spring-cloud-dependencies</artifactId>
-                <version>${spring-cloud.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
-
     <!-- 编译环境 -->
     <build>
         <plugins>
@@ -63,7 +41,7 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
                     <!-- 指定该Main Class为全局的唯一入口 -->
-                    <mainClass>com.parker.learn.eureka.consumer.ConsumerApplication</mainClass>
+                    <mainClass>com.parker.learn.eureka.provider.ProviderApplication</mainClass>
                 </configuration>
             </plugin>
             <!--指定JDK编译版本 -->

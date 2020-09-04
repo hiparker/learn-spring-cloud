@@ -14,15 +14,16 @@ import org.springframework.web.bind.annotation.RestController;
  * @Description: TODO
  */
 @RestController
-public class RestProviderController{
-
-    @Value("${server.port}")
-    private int port;
+public class RestUserService implements UserApi {
 
 
-    @RequestMapping("getHi")
-    public String getHi(){
-        return "Hi Eureka! 我的端口是："+port;
+    @Override
+    public User getUser() {
+        return new User("测试");
     }
 
+    @Override
+    public User saveUser(String userName) {
+        return new User(userName);
+    }
 }

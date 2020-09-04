@@ -1,16 +1,13 @@
 server:
-  port: 7602
+  port: 7700
 
 spring:
   application:
-    name: provider
+    name: openFeignConsumer
 
 # Eureka 公共配置
 eureka:
   client:
-    # 开启健康检测
-    healthcheck:
-      enabled: true
     service-url:
       defaultZone: http://root:123456@117.51.140.37:7500/eureka/,http://root:123456@47.93.54.81:7501/eureka/
 
