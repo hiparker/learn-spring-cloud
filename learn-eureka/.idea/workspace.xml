@@ -4,7 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="434318c8-0a00-4a67-a32d-d39378f97902" name="Default Changelist" comment="编码" />
+    <list default="true" id="434318c8-0a00-4a67-a32d-d39378f97902" name="Default Changelist" comment="编码">
+      <change beforePath="$PROJECT_DIR$/../learn-eureka-consumer/src/main/java/com/parker/learn/eureka/consumer/RestConsumerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../learn-eureka-consumer/src/main/java/com/parker/learn/eureka/consumer/RestConsumerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../learn-eureka-consumer/src/main/java/com/parker/learn/eureka/consumer/conf/RestTemplateConf.java" beforeDir="false" afterPath="$PROJECT_DIR$/../learn-eureka-consumer/src/main/java/com/parker/learn/eureka/consumer/conf/RestTemplateConf.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../learn-eureka-provider/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../learn-eureka-provider/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../learn-eureka-provider/src/main/java/com/parker/learn/eureka/provider/RestProviderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../learn-eureka-provider/src/main/java/com/parker/learn/eureka/provider/RestProviderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../learn-eureka-provider/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../learn-eureka-provider/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application-eureka2.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application-eureka2.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/parker/learn/eureka/EurekaApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/parker/learn/eureka/config/WebSecurityConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/parker/learn/eureka/event/CustomEvent.class" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -54,7 +67,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RebelAgentSelection">
@@ -66,14 +79,23 @@
       <recent name="E:\personal\practive\workspace\learn-spring-cloud\learn-eureka\src\main\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.EurekaApplication">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+  <component name="RunManager" selected="Spring Boot.EurekaApplication (1)">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EurekaApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="learn-eureka" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.parker.learn.eureka.EurekaApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -103,6 +125,7 @@
     <list>
       <item itemvalue="Spring Boot.EurekaApplication" />
       <item itemvalue="Spring Boot.EurekaApplication2" />
+      <item itemvalue="Spring Boot.EurekaApplication (1)" />
     </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -120,7 +143,8 @@
       <workItem from="1579435571529" duration="2530000" />
       <workItem from="1580645134640" duration="748000" />
       <workItem from="1580703896407" duration="1806000" />
-      <workItem from="1599123216969" duration="15644000" />
+      <workItem from="1599123216969" duration="16157000" />
+      <workItem from="1599185959566" duration="1801000" />
     </task>
     <task id="LOCAL-00001" summary="编码">
       <created>1579436540478</created>
@@ -144,46 +168,46 @@
       <screen x="0" y="23" width="1680" height="950" />
     </state>
     <state x="304" y="160" width="1190" height="676" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1680.950@0.23.1680.950" timestamp="1599124345707" />
-    <state width="1638" height="302" key="GridCell.Tab.0.bottom" timestamp="1599148873871">
+    <state width="1638" height="302" key="GridCell.Tab.0.bottom" timestamp="1599188160733">
       <screen x="0" y="23" width="1680" height="950" />
     </state>
-    <state width="1638" height="302" key="GridCell.Tab.0.bottom/0.23.1680.950@0.23.1680.950" timestamp="1599148873871" />
-    <state width="1638" height="302" key="GridCell.Tab.0.center" timestamp="1599148873871">
+    <state width="1638" height="302" key="GridCell.Tab.0.bottom/0.23.1680.950@0.23.1680.950" timestamp="1599188160733" />
+    <state width="1638" height="302" key="GridCell.Tab.0.center" timestamp="1599188160732">
       <screen x="0" y="23" width="1680" height="950" />
     </state>
-    <state width="1638" height="302" key="GridCell.Tab.0.center/0.23.1680.950@0.23.1680.950" timestamp="1599148873871" />
-    <state width="1638" height="302" key="GridCell.Tab.0.left" timestamp="1599148873870">
+    <state width="1638" height="302" key="GridCell.Tab.0.center/0.23.1680.950@0.23.1680.950" timestamp="1599188160732" />
+    <state width="1638" height="302" key="GridCell.Tab.0.left" timestamp="1599188160731">
       <screen x="0" y="23" width="1680" height="950" />
     </state>
-    <state width="1638" height="302" key="GridCell.Tab.0.left/0.23.1680.950@0.23.1680.950" timestamp="1599148873870" />
-    <state width="1638" height="302" key="GridCell.Tab.0.right" timestamp="1599148873871">
+    <state width="1638" height="302" key="GridCell.Tab.0.left/0.23.1680.950@0.23.1680.950" timestamp="1599188160731" />
+    <state width="1638" height="302" key="GridCell.Tab.0.right" timestamp="1599188160732">
       <screen x="0" y="23" width="1680" height="950" />
     </state>
-    <state width="1638" height="302" key="GridCell.Tab.0.right/0.23.1680.950@0.23.1680.950" timestamp="1599148873871" />
-    <state width="1638" height="302" key="GridCell.Tab.1.bottom" timestamp="1599148873872">
+    <state width="1638" height="302" key="GridCell.Tab.0.right/0.23.1680.950@0.23.1680.950" timestamp="1599188160732" />
+    <state width="1638" height="302" key="GridCell.Tab.1.bottom" timestamp="1599187670440">
       <screen x="0" y="23" width="1680" height="950" />
     </state>
-    <state width="1638" height="302" key="GridCell.Tab.1.bottom/0.23.1680.950@0.23.1680.950" timestamp="1599148873872" />
-    <state width="1638" height="302" key="GridCell.Tab.1.center" timestamp="1599148873872">
+    <state width="1638" height="302" key="GridCell.Tab.1.bottom/0.23.1680.950@0.23.1680.950" timestamp="1599187670440" />
+    <state width="1638" height="302" key="GridCell.Tab.1.center" timestamp="1599187670440">
       <screen x="0" y="23" width="1680" height="950" />
     </state>
-    <state width="1638" height="302" key="GridCell.Tab.1.center/0.23.1680.950@0.23.1680.950" timestamp="1599148873872" />
-    <state width="1638" height="302" key="GridCell.Tab.1.left" timestamp="1599148873872">
+    <state width="1638" height="302" key="GridCell.Tab.1.center/0.23.1680.950@0.23.1680.950" timestamp="1599187670440" />
+    <state width="1638" height="302" key="GridCell.Tab.1.left" timestamp="1599187670439">
       <screen x="0" y="23" width="1680" height="950" />
     </state>
-    <state width="1638" height="302" key="GridCell.Tab.1.left/0.23.1680.950@0.23.1680.950" timestamp="1599148873872" />
-    <state width="1638" height="302" key="GridCell.Tab.1.right" timestamp="1599148873872">
+    <state width="1638" height="302" key="GridCell.Tab.1.left/0.23.1680.950@0.23.1680.950" timestamp="1599187670439" />
+    <state width="1638" height="302" key="GridCell.Tab.1.right" timestamp="1599187670440">
       <screen x="0" y="23" width="1680" height="950" />
     </state>
-    <state width="1638" height="302" key="GridCell.Tab.1.right/0.23.1680.950@0.23.1680.950" timestamp="1599148873872" />
+    <state width="1638" height="302" key="GridCell.Tab.1.right/0.23.1680.950@0.23.1680.950" timestamp="1599187670440" />
     <state x="378" y="160" key="Maven.ArtifactSearchDialog" timestamp="1599124628284">
       <screen x="0" y="23" width="1680" height="950" />
     </state>
     <state x="378" y="160" key="Maven.ArtifactSearchDialog/0.23.1680.950@0.23.1680.950" timestamp="1599124628284" />
-    <state x="349" y="137" key="SettingsEditor" timestamp="1599123682495">
+    <state x="349" y="137" key="SettingsEditor" timestamp="1599186003589">
       <screen x="0" y="23" width="1680" height="950" />
     </state>
-    <state x="349" y="137" key="SettingsEditor/0.23.1680.950@0.23.1680.950" timestamp="1599123682495" />
+    <state x="349" y="137" key="SettingsEditor/0.23.1680.950@0.23.1680.950" timestamp="1599186003589" />
     <state x="484" y="179" key="new project wizard" timestamp="1599147231686">
       <screen x="0" y="23" width="1680" height="950" />
     </state>
