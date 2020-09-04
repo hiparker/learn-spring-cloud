@@ -28,6 +28,9 @@ public class RestConsumerController {
     @Autowired
     LoadBalancerClient lb;
 
+    @Autowired
+    RestTemplate restTemplate;
+
     @RequestMapping("client")
     public void client(){
         List<String> services = discoveryClient.getServices();
@@ -59,7 +62,6 @@ public class RestConsumerController {
                 URI uri = serviceInstance.getUri();
                 String url = uri.toString()+"/getHi";
 
-                RestTemplate restTemplate = new RestTemplate();
                 str = restTemplate.getForObject(url, String.class);
             }
         }
@@ -77,7 +79,6 @@ public class RestConsumerController {
         URI uri = serviceInstance.getUri();
         String url = uri.toString()+"/getHi";
 
-        RestTemplate restTemplate = new RestTemplate();
         str = restTemplate.getForObject(url, String.class);
 
         return str;
