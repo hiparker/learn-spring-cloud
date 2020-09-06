@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.*;
 public interface UserApi {
 
     @GetMapping("/getUser")
-    User getUser();
+    User getUser() throws InterruptedException;
 
     /**
      * 三种 传参格式

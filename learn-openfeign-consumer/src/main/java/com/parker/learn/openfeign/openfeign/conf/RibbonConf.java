@@ -15,7 +15,10 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class RibbonConf {
 
-
+    /**
+     * 设置Ribbon的 策略
+     * @return
+     */
     @Bean
     public IRule strategyRule(){
         return new RandomRule();

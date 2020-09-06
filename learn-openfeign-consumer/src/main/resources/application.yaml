@@ -11,3 +11,23 @@ eureka:
     service-url:
       defaultZone: http://root:123456@117.51.140.37:7500/eureka/,http://root:123456@47.93.54.81:7501/eureka/
 
+ribbon:
+  # 开启 http client
+  http:
+    client:
+      enabled: true
+  # 使用 ok http
+  okhttp:
+    enabled: true
+
+  #连接超时时间(ms)
+  ConnectTimeout: 1000
+  #业务逻辑超时时间(ms)
+  ReadTimeout: 6000
+
+  #同一台实例最大重试次数,不包括首次调用
+  MaxAutoRetries: 1
+  #重试负载均衡其他的实例最大重试次数,不包括首次调用
+  MaxAutoRetriesNextServer: 1
+  #是否所有操作都重试 只是针对get post 提交和del删除不做处理 ，防止出现幂等
+  OkToRetryOnAllOperations: false
