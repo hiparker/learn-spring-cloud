@@ -2,9 +2,9 @@ package com.parker.learn.openfeign.openfeign;
 
 import com.parker.learn.api.ResultDto;
 import com.parker.learn.api.dto.User;
-import com.parker.learn.openfeign.openfeign.api.ConsumerApiBySingle;
 import com.parker.learn.openfeign.openfeign.api.IUserApi;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -21,41 +21,21 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/v2/api")
 public class RestConsumerController {
 
-    @Autowired
-    private ConsumerApiBySingle consumerApiBySingle;
-
-    //@Autowired
-    //private ConsumerApi consumerApi;
 
     @Autowired
     private IUserApi iUserApi;
-
-    /**
-     * 单独 调用
-     * @return
-     */
-    @GetMapping("getHi1")
-    public Result getHi1(){
-        String hi = consumerApiBySingle.getHi();
-        return Result.success(hi);
-    }
-
-    /**
-     * 负载调用
-     * @return
-     */
-//    @GetMapping("getHi2")
-//    public Result getHi2(){
-//        String hi = consumerApi.getHi();
-//        return Result.success(hi);
-//    }
 
 
     @GetMapping("/getUser")
     public Result getUser() throws InterruptedException {
         Result result = new Result();
         ResultDto<User> dto = iUserApi.getUser();
-        result.put("user",dto.get());
+        if(dto.isSuccess()){
+            result.put("user",dto.get());
+        }else{
+            result.setMsg(dto.getMsg());
+            result.setCode(dto.getCode());
+        }
         return result;
     }
 
@@ -63,7 +43,13 @@ public class RestConsumerController {
     public Result saveUser(){
         Result result = new Result();
         ResultDto<User> dto = iUserApi.saveUser("保存用户");
-        result.put("user",dto.get());
+        if(dto.isSuccess()){
+            result.put("user",dto.get());
+        }else{
+            result.put("user",dto.get());
+            result.setMsg(dto.getMsg());
+            result.setCode(dto.getCode());
+        }
         return result;
     }
 

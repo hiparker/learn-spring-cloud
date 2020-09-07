@@ -1,9 +1,8 @@
 package com.parker.learn.eureka.provider;
 
+import com.parker.learn.api.ResultDto;
 import com.parker.learn.api.UserApi;
-import com.parker.learn.api.vo.User;
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.web.bind.annotation.RequestMapping;
+import com.parker.learn.api.dto.User;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.concurrent.TimeUnit;
@@ -22,17 +21,35 @@ public class RestUserService implements UserApi {
     private AtomicInteger atomicInteger = new AtomicInteger(0);
 
     @Override
-    public User getUser() throws InterruptedException {
+    public ResultDto<User> getUser(){
+        ResultDto<User> resultDto = new ResultDto<>();
+
         int i = atomicInteger.incrementAndGet();
         System.out.println("重试次数 "+i);
 
         // 睡眠 来测试 ribbon的重试次数
-        TimeUnit.SECONDS.sleep(7);
-        return new User("测试");
+        /*try {
+            TimeUnit.SECONDS.sleep(7);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }*/
+
+        User user = new User("测试");
+
+        resultDto.put(user);
+
+        return resultDto;
     }
 
     @Override
-    public User saveUser(String userName) {
-        return new User(userName);
+    public ResultDto<User> saveUser(String userName) {
+        ResultDto<User> resultDto = new ResultDto<>();
+
+        User user = new User(userName);
+
+        resultDto.setCode(3233);
+        resultDto.put(user);
+
+        return resultDto;
     }
 }

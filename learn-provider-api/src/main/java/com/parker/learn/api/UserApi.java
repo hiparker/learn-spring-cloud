@@ -1,6 +1,6 @@
 package com.parker.learn.api;
 
-import com.parker.learn.api.vo.User;
+import com.parker.learn.api.dto.User;
 import org.springframework.web.bind.annotation.*;
 
 /**
@@ -9,12 +9,15 @@ import org.springframework.web.bind.annotation.*;
  * @Author: Parker
  * @CreateTime: 2020-09-05 01:12
  * @Description: TODO
+ *
+ * 坑：  使用 hystrix 不能在上面直接定义 mapping
+ *
  */
-@RequestMapping("users")
+//@RequestMapping("users")
 public interface UserApi {
 
-    @GetMapping("/getUser")
-    User getUser() throws InterruptedException;
+    @GetMapping("/users/getUser")
+    ResultDto<User> getUser();
 
     /**
      * 三种 传参格式
@@ -24,7 +27,7 @@ public interface UserApi {
      * @param userName
      * @return
      */
-    @PostMapping("/saveUser")
-    User saveUser(@RequestParam(name = "userName") String userName);
+    @PostMapping("/users/saveUser")
+    ResultDto<User> saveUser(@RequestParam(name = "userName") String userName);
 
 }

@@ -1,7 +1,5 @@
 package com.parker.learn.eureka.provider;
 
-import com.parker.learn.api.UserApi;
-import com.parker.learn.api.vo.User;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;

@@ -1,0 +1,50 @@
+server:
+  port: 7750
+
+spring:
+  application:
+    name: openFeignConsumer
+
+# Eureka 公共配置
+eureka:
+  client:
+    service-url:
+      defaultZone: http://root:123456@117.51.140.37:7500/eureka/,http://root:123456@47.93.54.81:7501/eureka/
+
+
+feign:
+  compression:
+    # 配置请求GZIP压缩
+    request:
+      enabled: true
+      # 配置压缩支持的MIME TYPE
+      mime-types: text/xml,application/xml,application/json
+      # 配置压缩数据大小的下限
+      min-request-size: 2048
+    # 配置响应GZIP压缩
+    response:
+      enabled: true
+  # 采用 apache的 okhttp 作为 http访问
+  okhttp:
+    enabled: true
+  # feign 客户端配置
+  client:
+    config:
+      # 默认配置 -> 可单独指定 feignName
+      default:
+        # 链接超时时间
+        connectTimeout: 5000
+        # 读取超时时间
+        readTimeout: 5000
+        # 日志等级
+        loggerLevel: full
+        #同一台实例最大重试次数,不包括首次调用
+        MaxAutoRetries: 1
+        #重试负载均衡其他的实例最大重试次数,不包括首次调用
+        MaxAutoRetriesNextServer: 1
+        #是否所有操作都重试 只是针对get post 提交和del删除不做处理 ，防止出现幂等
+        OkToRetryOnAllOperations: false
+
+  # 启用 hystrix 来实现 熔断 降级 隔离
+  hystrix:
+    enabled: true

@@ -50,6 +50,7 @@
         <module>learn-eureka-consumer</module>
         <module>learn-openfeign-consumer</module>
         <module>learn-provider-api</module>
+        <module>learn-openfeign-hystrix-consumer</module>
     </modules>
 
 </project>

@@ -1,4 +1,4 @@
-package com.parker.learn.api.vo;
+package com.parker.learn.api.dto;
 
 import java.util.Random;
 

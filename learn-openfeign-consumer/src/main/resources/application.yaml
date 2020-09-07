@@ -16,9 +16,6 @@ ribbon:
   http:
     client:
       enabled: true
-  # 使用 ok http
-  okhttp:
-    enabled: true
 
   #连接超时时间(ms)
   ConnectTimeout: 1000
