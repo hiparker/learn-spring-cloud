@@ -9,9 +9,9 @@
     </parent>
 
     <groupId>com.parker.learn.openfeign</groupId>
-    <artifactId>learn-openfeign-consumer</artifactId>
+    <artifactId>learn-resttemplate-hystrix-consumer</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>learn-openfeign-consumer</name>
+    <name>learn-resttemplate-hystrix-consumer</name>
     <description>Demo project for Spring Boot</description>
 
 
@@ -38,37 +38,27 @@
             </exclusions>
         </dependency>
 
-        <!-- 引入open-feign -->
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-openfeign</artifactId>
-        </dependency>
-        <!-- Feign默认所有带参数的请求都是Post，想要使用指定的提交方式需引入依赖 -->
-        <dependency>
-            <groupId>io.github.openfeign</groupId>
-            <artifactId>feign-httpclient</artifactId>
-        </dependency>
 
-        <!-- 引入API -->
+        <!-- 暂时 引入API -->
         <dependency>
             <groupId>com.parker.learn</groupId>
             <artifactId>learn-provider-api</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
 
+        <!-- 引入 Hystrix -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
+        </dependency>
+        <!-- 引入 Hystrix 展示报表 正常生产不需要 -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-hystrix-dashboard</artifactId>
+        </dependency>
+
     </dependencies>
 
-    <dependencyManagement>
-        <dependencies>
-            <dependency>
-                <groupId>org.springframework.cloud</groupId>
-                <artifactId>spring-cloud-dependencies</artifactId>
-                <version>${spring-cloud.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
 
     <!-- 编译环境 -->
     <build>
@@ -78,7 +68,7 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
                     <!-- 指定该Main Class为全局的唯一入口 -->
-                    <mainClass>com.parker.learn.resttamplate.hystrix.LearnOpenfeignConsumerApplication</mainClass>
+                    <mainClass>com.parker.learn.resttamplate.hystrix.LearnRestTemplateHystrixConsumerApplication</mainClass>
                 </configuration>
             </plugin>
             <!--指定JDK编译版本 -->

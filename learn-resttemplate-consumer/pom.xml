@@ -8,11 +8,11 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <groupId>com.parker.learn.openfeign</groupId>
-    <artifactId>learn-openfeign-consumer</artifactId>
+    <groupId>com.parker.learn.eureka</groupId>
+    <artifactId>learn-resttemplate-consumer</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>learn-openfeign-consumer</name>
-    <description>Demo project for Spring Boot</description>
+    <name>learn-resttemplate-consumerr</name>
+    <description>消费者 project for Spring Boot</description>
 
 
     <dependencies>
@@ -20,12 +20,16 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
-
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
         </dependency>
 
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional>
+        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
@@ -37,25 +41,6 @@
                 </exclusion>
             </exclusions>
         </dependency>
-
-        <!-- 引入open-feign -->
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-openfeign</artifactId>
-        </dependency>
-        <!-- Feign默认所有带参数的请求都是Post，想要使用指定的提交方式需引入依赖 -->
-        <dependency>
-            <groupId>io.github.openfeign</groupId>
-            <artifactId>feign-httpclient</artifactId>
-        </dependency>
-
-        <!-- 引入API -->
-        <dependency>
-            <groupId>com.parker.learn</groupId>
-            <artifactId>learn-provider-api</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-        </dependency>
-
     </dependencies>
 
     <dependencyManagement>
@@ -78,7 +63,7 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
                     <!-- 指定该Main Class为全局的唯一入口 -->
-                    <mainClass>com.parker.learn.resttamplate.hystrix.LearnOpenfeignConsumerApplication</mainClass>
+                    <mainClass>com.parker.learn.eureka.consumer.ConsumerApplication</mainClass>
                 </configuration>
             </plugin>
             <!--指定JDK编译版本 -->

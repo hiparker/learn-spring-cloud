@@ -78,7 +78,7 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
                     <!-- 指定该Main Class为全局的唯一入口 -->
-                    <mainClass>com.parker.learn.openfeign.openfeign.LearnOpenFeignHystrixConsumerApplication</mainClass>
+                    <mainClass>com.parker.learn.resttamplate.hystrix.LearnOpenFeignHystrixConsumerApplication</mainClass>
                 </configuration>
             </plugin>
             <!--指定JDK编译版本 -->

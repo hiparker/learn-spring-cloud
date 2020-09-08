@@ -28,11 +28,11 @@ public class RestUserService implements UserApi {
         System.out.println("重试次数 "+i);
 
         // 睡眠 来测试 ribbon的重试次数
-        /*try {
+        try {
             TimeUnit.SECONDS.sleep(7);
         } catch (InterruptedException e) {
             e.printStackTrace();
-        }*/
+        }
 
         User user = new User("测试");
 
