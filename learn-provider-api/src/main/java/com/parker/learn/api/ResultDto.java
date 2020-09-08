@@ -22,7 +22,6 @@ import java.util.Map;
 public class ResultDto<T> implements Serializable {
 
 	/** Map 容器 */
-	@JsonProperty("resultMap")
 	private final Map<String,Object> resultMap = new HashMap<>(3);
 
 	/** 数据 */
