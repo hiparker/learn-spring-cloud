@@ -19,6 +19,13 @@ eureka:
     service-url:
       defaultZone: http://root:123456@117.51.140.37:7500/eureka/,http://root:123456@47.93.54.81:7501/eureka/
 
+ribbon:
+  #同一台实例最大重试次数,不包括首次调用
+  MaxAutoRetries: 2
+  #重试负载均衡其他的实例最大重试次数,不包括首次调用
+  MaxAutoRetriesNextServer: 2
+  #是否所有操作都重试 只是针对get post 提交和del删除不做处理 ，防止出现幂等
+  OkToRetryOnAllOperations: false
 
 feign:
   compression:
@@ -46,13 +53,6 @@ feign:
         readTimeout: 5000
         # 日志等级
         loggerLevel: full
-        #同一台实例最大重试次数,不包括首次调用
-        MaxAutoRetries: 1
-        #重试负载均衡其他的实例最大重试次数,不包括首次调用
-        MaxAutoRetriesNextServer: 1
-        #是否所有操作都重试 只是针对get post 提交和del删除不做处理 ，防止出现幂等
-        OkToRetryOnAllOperations: false
-
   # 启用 hystrix 来实现 熔断 降级 隔离
   hystrix:
     enabled: true
