@@ -12,12 +12,11 @@
 ## 练习 zuul
 
 ## 链路追踪
-
-## Spring Admin
-1. 邮件通知
-2. 钉钉通知
-
 ```
 curl -sSL https://zipkin.io/quickstart.sh | bash -s
 java -jar zipkin.jar
 ```
+## Spring Admin
+1. 邮件通知
+2. 钉钉通知
+
