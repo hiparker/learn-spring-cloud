@@ -12,6 +12,8 @@
 ## 练习 zuul
 
 ## 链路追踪
+
+## Spring Admin
 ```
 curl -sSL https://zipkin.io/quickstart.sh | bash -s
 java -jar zipkin.jar
