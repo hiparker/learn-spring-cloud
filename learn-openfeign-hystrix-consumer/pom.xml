@@ -82,6 +82,18 @@
             <artifactId>spring-cloud-starter-zipkin</artifactId>
         </dependency>
 
+
+        <!-- Admin 服务 -->
+        <dependency>
+            <groupId>de.codecentric</groupId>
+            <artifactId>spring-boot-admin-starter-client</artifactId>
+        </dependency>
+        <!-- 健康检测 - 上报当前服务器信息 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+
     </dependencies>
 
 

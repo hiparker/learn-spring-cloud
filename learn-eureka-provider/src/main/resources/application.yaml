@@ -1,5 +1,5 @@
 server:
-  port: 7601
+  port: 7602
 
 spring:
   application:
@@ -12,6 +12,12 @@ spring:
   sleuth:
     sampler:
       rate: 1
+
+  # admin
+  boot:
+    admin:
+      client:
+        url: http://localhost:8080
 # Eureka 公共配置
 eureka:
   client:
@@ -21,3 +27,12 @@ eureka:
     service-url:
       defaultZone: http://root:123456@117.51.140.37:7500/eureka/,http://root:123456@47.93.54.81:7501/eureka/
 
+# 暴露点
+management:
+  endpoints:
+    jmx:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always
