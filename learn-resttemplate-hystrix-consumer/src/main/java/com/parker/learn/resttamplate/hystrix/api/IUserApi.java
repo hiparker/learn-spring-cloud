@@ -5,6 +5,7 @@ import com.parker.learn.api.ResultDto;
 import com.parker.learn.api.dto.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.client.RestTemplate;
 
 /**
@@ -20,7 +21,7 @@ public class IUserApi {
     @Autowired
     RestTemplate restTemplate;
 
-    //@HystrixCommand(fallbackMethod = "getHiBack")
+    @HystrixCommand(defaultFallback = "getHiBack")
     public String getHi() {
         // 自动处理URL
         String url ="http://provider/getHi";
@@ -52,9 +53,7 @@ public class IUserApi {
      * 熔断回调
      * @return
      */
-    public String  getHiBack(){
-        return "熔断了";
-    }
+
     public ResultDto<User> getUserBack(){
         ResultDto<User> resultDto = new ResultDto<>();
         resultDto.setSuccess(false);
@@ -70,6 +69,10 @@ public class IUserApi {
         resultDto.setMsg("熔断了！！！！");
         resultDto.put(new User("兜底数据"+username));
         return resultDto;
+    }
+
+    public String  getHiBack(){
+        return "熔断了";
     }
 
 }
