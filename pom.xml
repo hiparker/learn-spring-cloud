@@ -52,6 +52,7 @@
         <module>learn-provider-api</module>
         <module>learn-openfeign-hystrix-consumer</module>
         <module>learn-resttemplate-hystrix-consumer</module>
+        <module>learn-zuul</module>
     </modules>
 
 </project>

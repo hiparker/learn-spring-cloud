@@ -3,7 +3,15 @@ server:
 
 spring:
   application:
-    name: openFeignConsumer
+    name: openfeign-consumer
+
+  #zipkin
+  zipkin:
+    base-url: http://localhost:9411/
+    #采样比例1
+  sleuth:
+    sampler:
+      rate: 1
 
 # Eureka 公共配置
 eureka:

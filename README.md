@@ -8,3 +8,11 @@
 ## 练习 Ribbon
 
 ## 练习 OpenFeign
+
+## 练习 zuul
+
+## 链路追踪
+```
+curl -sSL https://zipkin.io/quickstart.sh | bash -s
+java -jar zipkin.jar
+```
