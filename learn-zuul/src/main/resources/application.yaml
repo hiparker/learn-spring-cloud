@@ -5,6 +5,26 @@ spring:
   application:
     name: GatewayZuul
 
+
+  # admin
+  boot:
+    admin:
+      client:
+        username: root
+        password: 123456
+        instance:
+          name: admin
+# 暴露点
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always
+
+
 # Eureka 公共配置
 eureka:
   client:
@@ -31,6 +51,42 @@ eureka:
 #provider:
 #  ribbon:
 #    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
+
+ribbon:
+  #同一台实例最大重试次数,不包括首次调用
+  MaxAutoRetries: 2
+  #重试负载均衡其他的实例最大重试次数,不包括首次调用
+  MaxAutoRetriesNextServer: 2
+  #是否所有操作都重试 只是针对get post 提交和del删除不做处理 ，防止出现幂等
+  OkToRetryOnAllOperations: false
+
+feign:
+  compression:
+    # 配置请求GZIP压缩
+    request:
+      enabled: true
+      # 配置压缩支持的MIME TYPE
+      mime-types: text/xml,application/xml,application/json
+      # 配置压缩数据大小的下限
+      min-request-size: 2048
+    # 配置响应GZIP压缩
+    response:
+      enabled: true
+  # 采用 apache的 okhttp 作为 http访问
+  okhttp:
+    enabled: true
+  # feign 客户端配置
+  client:
+    config:
+      # 默认配置 -> 可单独指定 feignName
+      default:
+        # 链接超时时间
+        connectTimeout: 5000
+        # 读取超时时间
+        readTimeout: 5000
+        # 日志等级
+        loggerLevel: full
+
 
 zuul:
   # 忽略 服务端 只暴露 消费端

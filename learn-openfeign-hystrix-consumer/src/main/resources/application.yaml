@@ -8,10 +8,29 @@ spring:
   #zipkin
   zipkin:
     base-url: http://localhost:9411/
+
     #采样比例1
   sleuth:
     sampler:
       rate: 1
+  # admin
+  boot:
+    admin:
+      client:
+        username: root
+        password: 123456
+        instance:
+          name: admin
+# 暴露点
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always
+
 
 # Eureka 公共配置
 eureka:

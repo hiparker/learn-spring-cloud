@@ -23,8 +23,8 @@ ribbon:
   ReadTimeout: 6000
 
   #同一台实例最大重试次数,不包括首次调用
-  MaxAutoRetries: 1
+  MaxAutoRetries: 2
   #重试负载均衡其他的实例最大重试次数,不包括首次调用
-  MaxAutoRetriesNextServer: 1
+  MaxAutoRetriesNextServer: 2
   #是否所有操作都重试 只是针对get post 提交和del删除不做处理 ，防止出现幂等
   OkToRetryOnAllOperations: false

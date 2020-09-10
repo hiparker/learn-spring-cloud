@@ -6,11 +6,14 @@ spring:
   boot:
     admin:
       client:
-        url: http://localhost:8080
+        username: root
+        password: 123456
+        instance:
+          name: admin
 # 暴露点
 management:
   endpoints:
-    jmx:
+    web:
       exposure:
         include: "*"
   endpoint:
