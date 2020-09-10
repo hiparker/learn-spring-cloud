@@ -7,9 +7,3 @@ spring:
     user:
       name: root
       password: 123456
-
-# Eureka 公共配置
-eureka:
-  client:
-    service-url:
-      defaultZone: http://root:123456@117.51.140.37:7500/eureka/,http://root:123456@47.93.54.81:7501/eureka/

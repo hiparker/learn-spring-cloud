@@ -64,6 +64,12 @@
         </dependency>
 
 
+        <!-- 配置中心 -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-config-client</artifactId>
+        </dependency>
+
         <!-- 暂时 引入API -->
         <dependency>
             <groupId>com.parker.learn</groupId>

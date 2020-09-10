@@ -10,6 +10,6 @@ spring:
 eureka:
   instance:
     #强制指定IP地址，默认会获取本机的IP地址
-    ip-address: 192.168.0.105
+    ip-address: 47.93.54.81
     instance-id: ${spring.cloud.client.ip-address}:${server.port}
     hostname: ${spring.cloud.client.ip-address}-${server.port}

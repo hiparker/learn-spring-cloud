@@ -71,6 +71,12 @@
 
     <dependencies>
 
+        <!-- 消息总线 -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-bus-amqp</artifactId>
+        </dependency>
+
     </dependencies>
 
     <modules>
@@ -83,6 +89,7 @@
         <module>learn-resttemplate-hystrix-consumer</module>
         <module>learn-zuul</module>
         <module>learn-spring-admin</module>
+        <module>learn-config-center</module>
     </modules>
 
 </project>

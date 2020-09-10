@@ -1,0 +1,18 @@
+spring:
+  cloud:
+    config:
+      #直接URL方式查找配置中心
+      uri: http://localhost:7900
+      # 通过注册中心查找
+#      discovery:
+#        enabled: true
+#        service-id: config-center
+      # 分支
+      label: master
+      # 前缀名
+      name: common
+      # 后缀名
+      profile: dev
+      # 连接注册中心的账号密码
+      username: root
+      password: 123456

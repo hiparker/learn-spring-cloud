@@ -1,3 +1,13 @@
+## 启动顺序
+    1. rabbitMQ
+    2. 配置中心
+    3. 注册中心
+    4. zipkin链路追踪
+    5. rabbitMQ
+    6. provider
+    7. consumer
+    8. zuul网关
+
 ## 练习 Eureka
 
  - 加入 spring-cloud-security 安全
@@ -54,3 +64,6 @@ web 附加端点
 1. 邮件通知
 2. 钉钉通知
 
+## 注册中心
+1. bus消息总线
+2. rabbitMQ

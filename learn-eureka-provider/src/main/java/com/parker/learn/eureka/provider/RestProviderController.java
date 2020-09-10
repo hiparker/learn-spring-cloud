@@ -1,6 +1,7 @@
 package com.parker.learn.eureka.provider;
 
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -12,15 +13,21 @@ import org.springframework.web.bind.annotation.RestController;
  * @Description: TODO
  */
 @RestController
+@RefreshScope
 public class RestProviderController{
 
     @Value("${server.port}")
     private int port;
 
+    @Value("${print.text}")
+    private String text;
+
+    @Value("${print.version}")
+    private int version;
 
     @RequestMapping("getHi")
     public String getHi(){
-        return "Hi Eureka! 我的端口是："+port;
+        return "Hi Eureka! 我的端口是："+port +" "+text +" 版本号："+version ;
     }
 
 }

@@ -2,24 +2,6 @@ spring:
   profiles:
     include: eureka2
 
-  # admin
-  boot:
-    admin:
-      client:
-        username: root
-        password: 123456
-        instance:
-          name: admin
-# 暴露点
-management:
-  endpoints:
-    web:
-      exposure:
-        include: "*"
-  endpoint:
-    health:
-      show-details: always
-
 #eureka
 eureka:
   server:
