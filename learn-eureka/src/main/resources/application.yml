@@ -2,6 +2,21 @@ spring:
   profiles:
     include: eureka2
 
+  # admin
+  boot:
+    admin:
+      client:
+        url: http://localhost:8080
+# 暴露点
+management:
+  endpoints:
+    jmx:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always
+
 #eureka
 eureka:
   server:
