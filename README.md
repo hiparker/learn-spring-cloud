@@ -49,7 +49,9 @@ java -jar zipkin.jar
 | `sessions`         | 允许从Spring Session支持的会话存储中检索和删除用户会话。使用Spring Session对响应式Web应用程序的支持时不可用。 |
 | `shutdown`         | 允许应用程序正常关闭。                                       |
 | `threaddump`       | 执行线程转储。                                               |
-web 附加端点
+
+**web 附加端点**
+
 | ID           | 描述                                                         |
 | :----------- | :----------------------------------------------------------- |
 | `heapdump`   | 返回`hprof`堆转储文件。                                      |
